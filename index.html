@@ -30,6 +30,11 @@
 
     </style>
 <script>
+    window.addEventListener('load', function () {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); // 'instant' isn't widely supported; fallback below
+      window.scrollTo(0, 0);
+
+    
     function checkScreenSize() {
         if (window.innerWidth < 1024 && window.location.pathname.includes('index')) {
     window.location.href = 'sorry.html';
