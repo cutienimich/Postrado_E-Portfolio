@@ -31,9 +31,28 @@
     </style>
 <script>
     function checkScreenSize() {
-        <div class="boxes" style="width: 100%; height:10px; background-color: #221814; font-family:"Ubuntu", san-serif"></div>
+        if (window.innerWidth < 1024 && window.location.pathname.includes('index')) {
+    window.location.href = 'sorry.html';
+}
+    }
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+</script>
+</head>
+<body>
+    <!--welcome page-->
+    <section class="sec" id="welcome">
+        <div class="welcome-con">
+            <div class="boxes-cat">      
+              <img src="https://www.pngmart.com/files/23/Pixel-Art-PNG-File.png" alt="Cat" id="cat"></div>
+        <div class="boxess" >
+        <div class="boxes" style="width: 100%; height:10px; background-color: #221814;"></div>
+        <h1 id="hello" style="margin: 10px 0;">WELCOME</h1>
+        <div class="boxes" style="width: 100%; height:10px; background-color: #221814;"></div>
+        <h5 style="color: #221814; font-family: 'Press Start 2P', cursive; font-size: 15px; width:100%;text-align:center">Scroll down to see more</h5>
         </div>
         </div>
+
 
 
     </section>
