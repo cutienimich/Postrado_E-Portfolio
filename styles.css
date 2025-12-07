@@ -21,7 +21,7 @@ body {
     position: absolute;
     bottom: 10px;
     
- /* animation: leftRight 40s linear infinite ;*/
+  animation: leftRight 40s linear infinite ;
 }
 #catbg{
     position: absolute;
