@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="styles.css">
 <script>
     function checkScreenSize() {
-        if (window.innerWidth < 1024 && window.location.pathname.endsWith('index.html')) {
-            window.location.href = 'sorry.html';
-        }
+    if (window.innerWidth < 1024 && window.location.pathname.includes('index')) {
+        window.location.href = 'sorry.html';
+    }
     }
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
