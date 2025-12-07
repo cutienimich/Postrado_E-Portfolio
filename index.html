@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="styles.css">
 <script>
     function checkScreenSize() {
-        if (window.innerWidth < 1024 && window.location.pathname.endsWith('index.html')) {
-            window.location.href = 'sorry.html';
-        }
+        if (window.innerWidth < 1024 && window.location.pathname.includes('index')) {
+    window.location.href = 'sorry.html';
+}
     }
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
@@ -21,13 +21,17 @@
 <body>
     <!--welcome page-->
     <section class="sec" id="welcome">
-        <div class="boxes"></div>
+        <div class="welcome-con">
+            <div class="boxes-cat">      
+              <img src="https://www.pngmart.com/files/23/Pixel-Art-PNG-File.png" alt="Cat" id="cat"></div>
         <div class="boxess" >
         <div class="boxes" style="width: 100%; height:10px; background-color: #221814;"></div>
         <h1 id="hello" style="margin: 10px 0;">WELCOME</h1>
         <div class="boxes" style="width: 100%; height:10px; background-color: #221814;"></div>
+        <h5 style="color: #221814; font-family: 'Press Start 2P', cursive; font-size: 15px; width:100%;text-align:center">Scroll down to see more</h5>
         </div>
-        <img src="https://www.pngmart.com/files/23/Pixel-Art-PNG-File.png" alt="Cat" id="cat">
+        </div>
+
 
     </section>
     <section class="sec" id="about-me" >
@@ -51,22 +55,25 @@
             </div>
         </div>
     </section>
-   <section class="sec" id="education" >
-     <div class="divv"></div>
+<section class="sec" id="education">
     <h2 class="headings">EDUCATION</h2>
+    <div  id="educ-wrapper">
+    
+    <div id="educ-left" class="educ-btn">&#9664;</div>
+  <div id="educ-content">
+    <!-- slide content here -->
+    <h2 id="school"></h2>
+    <i id="year"></i><br>
+    <strong>PROGRAM:</strong><h3 id="program"></h3>
+    <strong>Details:</strong><h3 id="extra"></h3>
 
-    <div id="educ-wrapper">
+    <!-- overlay arrows/buttons -->
+    
+    
+  </div>
+  <div id="educ-right" class="educ-btn">&#9654;</div>
+</div>
 
-        <div id="educ-left" class="educ-btn">🠸</div>
-
-     
-        <div class="con-content" id="educ-content">
-          
-        </div>
-
-        <div id="educ-right" class="educ-btn">➤</div>
-
-    </div>
 </section>
 <section class="sec" id="e-cert" >
      <div class="divv"></div>
@@ -142,7 +149,7 @@
         <h2 class="headings">SKILLS</h2>
         <div class="skills-container">
            <div class="technical">
-            <h3 style="margin:0;">Technical Skills</h3>
+            <h3 style="margin-top:20px; font-size:25px">Technical Skills</h3>
             <div class="skills-grid">
                 <div class="skill-item">
                     <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML">
