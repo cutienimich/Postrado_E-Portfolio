@@ -8,19 +8,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Science+Gothic:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>
+    function checkScreenSize() {
+        if (window.innerWidth < 1024 && window.location.pathname.endsWith('index.html')) {
+            window.location.href = 'sorry.html';
+        }
+    }
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+</script>
 </head>
 <body>
     <!--welcome page-->
-    <section class="sec" id="welcome"  >
-        <div class="boxes" style="position: absolute; height: 100vh; width: 100%; top: 0; left: 0; margin: 0; backdrop-filter: blur(2px); background-color: #ffffff00; "></div>
-        <div class="boxes" style="width: 45%; border-radius: 0 50px 50px 0"></div>
-        <div class="boxes" style="width:15%; color: white;"></div><h1 id="hello" style="margin-left:10px; color: #fddca9;text-shadow: 2px 2px 4px #000000; font-family: 'Press Start 2P', cursive;position: relative; top: 95px; left: 200px; display:inline;">WELCOME</h1>
-        <div class="boxes" style="width: 60%; height: 2vh; top: 110px;"></div>
-        <div class="boxes" style="width: 98%; height: 1vh; top: 270px; border-radius: 10px; margin-left:10px"></div>
-        <img src="https://www.pngmart.com/files/23/Pixel-Art-PNG-File.png" alt="Cat" width="500px;" id="cat" style=" z-index: 1; position: absolute; top: 100px;  right:-50px;">
- 
+    <section class="sec" id="welcome">
+        <div class="boxes"></div>
+        <div class="boxess" >
+        <div class="boxes" style="width: 100%; height:10px; background-color: #221814;"></div>
+        <h1 id="hello" style="margin: 10px 0;">WELCOME</h1>
+        <div class="boxes" style="width: 100%; height:10px; background-color: #221814;"></div>
+        </div>
+        <img src="https://www.pngmart.com/files/23/Pixel-Art-PNG-File.png" alt="Cat" id="cat">
+
     </section>
-    <section class="sec" id="about-me" style="margin-top: 30%;">
+    <section class="sec" id="about-me" >
         <h2 class="headings">ABOUT ME</h2>
         <div class="con">
             <div id="me">
@@ -36,7 +46,7 @@
                 <div id="division"></div>
                 <div id="goal">
                     <h3>GOALS</h3>
-                    <p style="background-color: #221814; padding:10px;width: 300px; border-radius: 10px;">Get a job anything related to IT</p>
+                    <p style="background-color: #221814; padding:10px; border-radius: 10px;">Get a job anything related to IT</p>
                 </div>
             </div>
         </div>
