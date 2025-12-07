@@ -10,14 +10,16 @@
 <link rel="stylesheet" href="styles.css">
     <style>
          /* Hide mobile message by default */
-                    width: 90vw;
+             
+  .mobile-view { 
+         width: 90vw;
             display: flex;
             flex-direction: column;
             
             justify-content: center;
             align-items: center;
             text-align: center;
-  .mobile-view { display: none; }
+      display: none; }
 
   /* Show mobile message if screen < 1024px */
   @media (max-width: 1023px) {
@@ -419,7 +421,7 @@
         </div>
     </section>
     </div>
-<div class="mobile-view">
+<div class="mobile-view" style="display:none;">
  <img src="https://i.pinimg.com/1200x/3d/cd/10/3dcd10d5c83a02c7b52fb87106f004bc.jpg" alt="IDK" width="300px">
         <h1>specifically for desktop view. Kayo mag adjust pls.</h1>
         <h1>Try to open this in a desktop</h1>
