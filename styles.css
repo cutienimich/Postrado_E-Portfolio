@@ -97,7 +97,7 @@ body {
   position: relative;
   width: 100%;
   height: 70vh;
-
+  margin: 10% 0;
     display: flex;
   flex-direction: row;
   align-items: center;
@@ -114,7 +114,7 @@ body {
   color: #fddca9;
   font-family: "Ubuntu", sans-serif;
   text-align: center;
-  padding: 20px;
+  padding: 40px;
 
 }
 
@@ -169,6 +169,10 @@ body {
 
 #educ-right {
     right: 0;
+}
+.educ-btn {
+    cursor: pointer;
+    font-size: 100px;
 }
 
 .cert-list {

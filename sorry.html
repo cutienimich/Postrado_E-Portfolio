@@ -25,15 +25,15 @@
         <a href="index.html" style="color: blue;">Go Back</a>
     </div>
     <script>
-function updateScreenWidth() {
-    document.getElementById('screen-width').textContent = window.innerWidth;
-    if (window.innerWidth < 1024) {
-        // Show this page (do nothing, stay here)
-    } else {
-        // Redirect to desktop version
-        window.location.href = 'index.html';
-    }
-}
+        function updateScreenWidth() {
+            document.getElementById('screen-width').textContent = window.innerWidth;
+            if (window.innerWidth < 1024) {
+                // Show this page (do nothing, stay here)
+            } else {
+                // Redirect to desktop version
+                window.location.href = 'index.html';
+            }
+        }
         updateScreenWidth();
         window.addEventListener('resize', updateScreenWidth);
     </script>

@@ -59,6 +59,7 @@ loadEducation();
 
 
 
+
 // Certificate icon link
 const certIcon = "https://cdn-icons-png.flaticon.com/512/6703/6703900.png";
 
