@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Bad Bruh</title>
+    <style>
+        body {
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://i.pinimg.com/1200x/3d/cd/10/3dcd10d5c83a02c7b52fb87106f004bc.jpg" alt="IDK" width="300px">
+        <h1>specifically for desktop view. Kayo mag adjust pls.</h1>
+        <h1>Try to open this in a desktop</h1>
+        <p>Your screen width is: <span id="screen-width"></span>px</p>
+        <a href="index.html" style="color: blue;">Go Back</a>
+    </div>
+    <script>
+        function updateScreenWidth() {
+            document.getElementById('screen-width').textContent = window.innerWidth;
+            if (window.innerWidth >= 1024) {
+                window.location.href = 'index.html';
+            }
+        }
+        updateScreenWidth();
+        window.addEventListener('resize', updateScreenWidth);
+    </script>
+</body>
+</html>
