@@ -2,7 +2,9 @@ body {
     background: url("Pictures/bg.png") no-repeat center center fixed;
     background-size: cover;
     margin: 0 5%;
-    font-size: 16px; /* base for rem */
+    font-size: 16px;
+    scroll-behavior: smooth;
+
 }
 .sec{
     margin: 10% 0 ;
