@@ -34,20 +34,15 @@ const educData = [
 let index = 0;
 
 function loadEducation() {
-    const content = document.getElementById("educ-content");
-    const data = educData[index];
-
-    content.style.backgroundImage = `url('${data.bg}')`;
-
-    content.innerHTML = `
-        <h2>${data.school}</h2>
-        <i>${data.year}</i><br>
-        <strong>PROGRAM:</strong>
-        <h3>${data.program}</h3>
-        <strong>Details:</strong>
-        <h3>${data.extra}</h3>
-    `;
+  const data = educData[index];
+  const content = document.getElementById("educ-content");
+  content.style.backgroundImage = `url('${data.bg}')`;
+  document.getElementById("school").textContent = data.school;
+  document.getElementById("year").textContent = data.year;
+  document.getElementById("program").textContent = data.program;
+  document.getElementById("extra").textContent = data.extra;
 }
+
 
 document.getElementById("educ-left").onclick = () => {
     index = (index - 1 + educData.length) % educData.length;
@@ -60,6 +55,7 @@ document.getElementById("educ-right").onclick = () => {
 };
 
 loadEducation();
+
 
 
 
