@@ -31,31 +31,10 @@
     </style>
 <script>
     function checkScreenSize() {
-    if (window.innerWidth < 1024) {
-      document.getElementById('desktop-view').style.display = 'none';
-      document.getElementById('mobile-view').style.display = 'block';
-    } else {
-      document.getElementById('desktop-view').style.display = 'block';
-      document.getElementById('mobile-view').style.display = 'none';
-    }
-  }
-
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-</script>
-</head>
-<body>
-    <div class="desktop-view" id="desktop-view">
-
-    <!--welcome page-->
-    <section class="sec" id="welcome">
-        <div class="boxes"></div>
-        <div class="boxess" >
-        <div class="boxes" style="width: 100%; height:10px; background-color: #221814;font-family:"Ubuntu", san-serif"></div>
-        <h1 id="hello" style="margin: 10px 0;">WELCOME</h1>
         <div class="boxes" style="width: 100%; height:10px; background-color: #221814; font-family:"Ubuntu", san-serif"></div>
         </div>
-        <img src="https://www.pngmart.com/files/23/Pixel-Art-PNG-File.png" alt="Cat" id="cat">
+        </div>
+
 
     </section>
     <section class="sec" id="about-me" >
@@ -173,7 +152,7 @@
         <h2 class="headings">SKILLS</h2>
         <div class="skills-container">
            <div class="technical">
-            <h3 style="margin:0;">Technical Skills</h3>
+            <h3 style="margin-top:20px; font-size:25px">Technical Skills</h3>
             <div class="skills-grid">
                 <div class="skill-item">
                     <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML">

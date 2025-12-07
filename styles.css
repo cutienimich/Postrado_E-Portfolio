@@ -4,13 +4,16 @@ body {
     margin: 0 5%;
     font-size: 16px; /* base for rem */
 }
-
+.sec{
+    margin: 20% 0 ;
+    color:#fddca9;
+}
 #welcome {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
     position: relative;
 }
 
@@ -23,16 +26,18 @@ body {
     margin: 0;
     z-index: 2;
 }
-
+.welcome-con{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 #cat {
-    width: clamp(150px, 20vw, 500px);
-    max-width: 100%;
-    height: auto;
-    z-index: 1;
-    margin-top: 20px;
+    width: 70%;
+
 }
 .headings {
-    color: #fddca9;
+    color: #221814;
     font-family: "Press Start 2P", sans-serif;
     margin-left: 10px;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -231,9 +236,7 @@ body {
     image-rendering: pixelated;
 }
 #cert-container {
-    background-color: #22181464; /* semi-transparent overlay like Education */
-    border-radius: 20px;
-    backdrop-filter: blur(4px);
+    
     padding: 40px;
     margin: 20px;
 }
@@ -256,6 +259,12 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .cert-title {
@@ -304,11 +313,14 @@ body {
 /* GRID FOR TECHNICAL SKILLS (ICONS) */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 10px;
 }
-
+.technical{
+    display: flex;
+    justify-content: space-between;
+}
 .skill-item {
     display: flex;
     flex-direction: column;
@@ -319,8 +331,8 @@ body {
 }
 
 .skill-item img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     max-width: 100%;
     object-fit: contain;
     margin-bottom: 8px;
@@ -333,7 +345,7 @@ body {
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 5px;
 }
 
 .softskills-item {
@@ -378,6 +390,7 @@ body {
     padding-bottom: 15px;
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
+    box-shadow: 0px 0px 5px rgb(40, 24, 24);
 }
 
 .project-item:hover {
@@ -395,7 +408,7 @@ body {
 .project-item h3 {
     margin-top: 10px;
     font-size: 1.125rem;
-    color: white;
+    color:#fddca9;
 }
 
 /* Make the entire card clickable */
@@ -406,7 +419,7 @@ body {
 }
 
 #research-conducted {
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 .research-container {
@@ -414,7 +427,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
     width: 90%;
-    height: 75vh;
+    height: 20vh;
     margin: auto;
 }
 
@@ -424,7 +437,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items:center ;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     border-radius: 15px;
     transition: 0.3s;
@@ -441,8 +454,8 @@ body {
 }
 
 .research-item img {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     max-width: 100%;
     object-fit: contain;
     margin-bottom: 10px;
@@ -456,6 +469,7 @@ body {
 
 .research-item p {
     opacity: 0.8;
+    color: white;
 }
 
 #reflection {
@@ -469,11 +483,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color:#fddca9;
 }
 
 .reflection-item {
     background: #ffffff10;
-    padding: 30px;
+    padding: 50px;
     border-radius: 20px;
     max-width: 800px;
     backdrop-filter: blur(12px);
@@ -494,7 +509,6 @@ body {
 .reflection-item h3 {
     margin-top: 20px;
     font-size: 1.375rem;
-    color: #fff;
     text-align: center;
 }
 
