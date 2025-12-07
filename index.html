@@ -8,12 +8,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Science+Gothic:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+    <style>
+         /* Hide mobile message by default */
+  .mobile-view { display: none; }
+
+  /* Show mobile message if screen < 1024px */
+  @media (max-width: 1023px) {
+    .mobile-view { display: block; }
+  }
+
+    </style>
 <script>
     function checkScreenSize() {
-    if (window.innerWidth < 1024 && window.location.pathname.includes('index')) {
-        window.location.href = 'sorry.html';
+    if (window.innerWidth < 1024) {
+      document.getElementById('desktop-view').style.display = 'none';
+      document.getElementById('mobile-view').style.display = 'block';
+    } else {
+      document.getElementById('desktop-view').style.display = 'block';
+      document.getElementById('mobile-view').style.display = 'none';
     }
-    }
+  }
+
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
 </script>
@@ -392,6 +407,14 @@
             <div class="block"></div>
         </div>
     </section>
+<div class="mobile-view">
+ <img src="https://i.pinimg.com/1200x/3d/cd/10/3dcd10d5c83a02c7b52fb87106f004bc.jpg" alt="IDK" width="300px">
+        <h1>specifically for desktop view. Kayo mag adjust pls.</h1>
+        <h1>Try to open this in a desktop</h1>
+        <p>Your screen width is: <span id="screen-width"></span>px</p>
+        <a href="index.html" style="color: blue;">Go Back</a>
+</div>
+
 
     <script src="script.js">
 
