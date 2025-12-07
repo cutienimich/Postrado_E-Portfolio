@@ -89,59 +89,81 @@ body {
      margin-top: 10px;
 }
 #educ-wrapper {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  margin: 10% 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3%;
-    gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-
 
 #educ-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  color: #fddca9;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  padding: 40px;
 
-    position: relative;
-    width: 70%;
-    height: 70vh;
-    border-radius: 20px;
-
-    /* Background image (JS will control this) */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /* Layout */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding: 40px;
-    text-align: center;
-
-    color: #fddca9;
-    font-family: "Ubuntu", sans-serif;
-
-    overflow: hidden; /* para hindi lumampas yung overlay */
 }
 
-/* ===== OVERLAY COLOR + BLUR EFFECT ===== */
 #educ-content::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 20px;
-
-    background-color: rgba(34, 24, 20, 0.65); /* brown overlay */
-    backdrop-filter: blur(4px);
-
-    z-index: 1; /* overlay above bg image */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(34,24,20,0.65);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  z-index: 1;
 }
 
-/* ===== Text must stay on top ===== */
 #educ-content * {
-    position: relative;
-    z-index: 2;
-    text-shadow: 0px 0px 5px #000;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 5px #000;
+}
+
+.educ-btn {
+  position: absolute;
+  top: 0;
+  width: 10%;               /* or 15% as you prefer */
+  height: 100%;
+  color:  rgba(0,0,0,0.7);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+#educ-left {
+  left: 0;
+}
+
+#educ-right {
+  right: 0;
+}
+
+.educ-btn:hover {
+    color: #fddca9;
+}
+
+
+#educ-left {
+    left: 0;
+}
+
+#educ-right {
+    right: 0;
 }
 .educ-btn {
     cursor: pointer;
